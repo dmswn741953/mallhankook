@@ -1,27 +1,28 @@
 @charset "utf-8";
 @font-face {
   font-family: "inter_regular";
-  src: url(../webfonts/inter-v12-latin-regular.woff);
+  src: url(../webfonts/inter-v12-latin-regular.woff) format(woff);
 }
 @font-face {
   font-family: "inter500";
-  src: url(../webfonts/inter-v12-latin-500.woff);
+  src: url(../webfonts/inter-v12-latin-500.woff) format(woff);
 }
 @font-face {
   font-family: "inter700";
-  src: url(../webfonts/inter-v12-latin-700.woff);
+  src: url(../webfonts/inter-v12-latin-700.woff) format(woff);
 }
 @font-face {
   font-family: "noto-sans_regular";
-  src: url(../webfonts/noto-sans-kr-v27-latin_korean-regular.woff2);
+  src: url(../webfonts/noto-sans-kr-v27-latin_korean-regular.woff2)
+    format(woff2);
 }
 @font-face {
   font-family: "noto-sans500";
-  src: url(../webfonts/noto-sans-kr-v27-latin_korean-500.woff2);
+  src: url(../webfonts/noto-sans-kr-v27-latin_korean-500.woff2) format(woff2);
 }
 @font-face {
   font-family: "noto-sans700";
-  src: url(../webfonts/noto-sans-kr-v27-latin_korean-700.woff2);
+  src: url(../webfonts/noto-sans-kr-v27-latin_korean-700.woff2) format(woff2);
 }
 * {
   margin: 0;
@@ -34,6 +35,7 @@ a {
   text-decoration: none;
 }
 .wrap {
+  position: relative;
   width: 100%;
   /* max-width: 1905px; */
   overflow: hidden;
@@ -887,6 +889,74 @@ footer .ftRight ul li span {
 footer .ftRight ul li:first-child p:nth-child(5) {
   margin-bottom: 20px;
 }
+.wrap .mo_menu {
+  width: 295px;
+  height: 100vh;
+  position: relative;
+  background: #fff;
+  top: 0;
+  left: -295px;
+  z-index: 10;
+  transition: 0.5s;
+}
+.wrap .mo_menu.on {
+  position: fixed;
+  left: 0px;
+}
+.wrap .mo_menu .login {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  box-sizing: border-box;
+  border-bottom: 13px solid rgb(249, 249, 249);
+}
+.wrap .mo_menu .login li:first-child {
+  padding-bottom: 10px;
+  font-size: 13px;
+  font-family: "noto-sans_regular";
+  color: #707070;
+}
+.wrap .mo_menu .login li:nth-child(2) a {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 5px;
+  font-size: 20px;
+  color: #000;
+}
+.wrap .mo_menu .login li:nth-child(2) a span:nth-child(2) {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background: #000;
+}
+.wrap .mo_menu .login li:nth-child(2) a span:nth-child(2) img {
+  width: 16px;
+  height: 16px;
+}
+.wrap .mo_menu .list > li {
+  padding: 20px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #dadada79;
+  overflow: hidden;
+}
+.wrap .mo_menu .list li > a {
+  color: #000;
+  font-family: "noto-sans_regular";
+}
+.wrap .mo_menu .list li .sub_list {
+  font-size: 14px;
+  height: 0;
+  visibility: hidden;
+}
+.wrap .mo_menu .list li .sub_list.on {
+  visibility: visible;
+}
+/*---------- 미디어쿼리 ---------------------------*/
 @media screen and (max-width: 1440px) {
   footer {
     padding: 60px 40px;
