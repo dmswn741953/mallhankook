@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mallhankoo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <style>
+    .wrap{background: #ccc !important; height: auto !important;overflow: visible !important;}
+    #freeboard{position: relative;top: 120px;width: 1200px ;margin: 0 auto;}
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="notice">
+        <p>카톡 채널 추가 3,000원ㅣ신규가입 5% 할인ㅣ70,000원 이상 무료배송</p>
+        <button><img src="./images/closed.png" alt="closed" /></button>
+      </div>
+      <div class="main">
+        <div class="nav_wrap">
+          <div class="nav">
+            <div class="menu_mo">
+              <p><img src="./images/menu_mo.svg" alt="menu_mo" /></p>
+            </div>
+            <div class="nav_logo">
+              <a href="#">
+                <p><img src="./images/logo_black.png" alt="logo_black" /></p>
+              </a>
+            </div>
+            <ul class="menu">
+              <li>
+                <a href=""><span>브랜드</span></a>
+                <ul class="sub_menu">
+                  <li><a href="#">스토리</a></li>
+                  <li><a href="#">한국도자기 </a></li>
+                  <li><a href="#">프라우나 </a></li>
+                  <li><a href="#">화이트블룸 </a></li>
+                  <li><a href="#">해외브랜드 </a></li>
+                  <li><a href="#">about 본차이나 </a></li>
+                </ul>
+              </li>
+              <li>
+                <a href=""><span>컬렉션</span></a>
+              </li>
+              <li>
+                <a href=""><span>스토어</span></a>
+              </li>
+              <li>
+                <a href=""><span>아카이브</span></a>
+                <ul class="sub_menu">
+                  <li><a href="#">이벤트</a></li>
+                  <li><a href="#">저널 </a></li>
+                  <li><a href="#">룩북 </a></li>
+                </ul>
+              </li>
+              <li>
+                <a href=""><span>B2B/주문제작</span></a>
+              </li>
+              <li>
+                <a href=""><span>커뮤니티</span></a>
+                <ul class="sub_menu">
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">문의하기 </a></li>
+                  <li><a href="#">상품 리뷰 </a></li>
+                  <li><a href="freeboard.html">자유게시판</a></li>
+                  <li><a href="#">FAQ</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href=""><span>매장 안내</span></a>
+                <ul class="sub_menu">
+                  <li><a href="#">매장</a></li>
+                  <li><a href="#">백화점 </a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="service">
+              <li><a href="">Login</a> <a href="">Join</a></li>
+              <li><a href="">KR</a></li>
+              <li class="nav_icon">
+                <p><img src="./images/nav_icon_01.svg" alt="search" /></p>
+              </li>
+              <li class="nav_icon">
+                <a href="../freeboard.html">
+                  <p><img src="./images/nav_icon_02.svg" alt="favorite" /></p>
+                </a>
+              </li>
+              <li class="nav_icon">
+                <p><img src="./images/nav_icon_03.svg" alt="shop" /></p>
+              </li>
+            </ul>
+          </div>
+          <div class="navBg"></div>
+        </div>
+    <div id="freeboard">
+      <iframe
+        src="http://judia.dothome.co.kr/gnuboard5/bbs/board.php?bo_table=free"
+        id="iframe"
+        style="width: 100%"
+        onload="Height();"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+    </div>
+    <script>
+      function Height() {
+        var the_height =
+          document.getElementById("iframe").contentWindow.document.body
+            .scrollHeight;
+        document.getElementById("iframe").height = the_height + 50;
+        document.getElementById("iframe").style.overflow = "hidden";
+      }
+    </script>
+  </body>
+</html>
