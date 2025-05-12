@@ -1,0 +1,635 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.wrap {
+  width: 100%;
+}
+.wrap .main {
+  width: 100%;
+  position: relative;
+}
+.wrap .notice {
+  position: relative;
+  width: 100%;
+  height: 34px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  line-height: 34px;
+  transition: 0.5s;
+}
+.wrap .notice.on {
+  height: 0;
+}
+.wrap .notice button {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  right: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  transition: 0.5s;
+}
+.wrap .notice button.on {
+  height: 0;
+  overflow: hidden;
+}
+.wrap .main .nav_wrap {
+  width: 100%;
+  position: relative;
+}
+
+.wrap .main .nav_wrap.on::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.5px;
+  background: rgba(163, 161, 161, 0.377);
+  top: 70px;
+  left: 0;
+  z-index: 2;
+}
+.wrap .main .nav {
+  width: 100%;
+  height: 69px;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 1fr;
+  z-index: 3;
+}
+
+.wrap .main .nav .nav_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 70px;
+  box-sizing: border-box;
+}
+.wrap .main .nav .nav_logo a {
+  display: inline-block;
+}
+.wrap .main .nav .nav_logo a p {
+  width: 185px;
+}
+.wrap .main .nav .nav_logo a p img {
+  width: 100%;
+}
+.wrap .main .nav .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.wrap .main .nav .menu li {
+  width: 110px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.wrap .main .nav .menu > li > a {
+  display: block;
+  color: #fff;
+  font-size: 16;
+  text-align: center;
+}
+.wrap .main .nav .menu > li > a.on {
+  color: #000;
+}
+.wrap .main .nav .menu > li > a span {
+  position: relative;
+}
+.wrap .main .nav .menu > li a span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #fb865b;
+  left: 0;
+  bottom: -24px;
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+.wrap .main .nav .menu > li:hover a span::after {
+  transform: scaleX(1);
+}
+.wrap .main .nav .menu li .sub_menu {
+  width: 100%;
+  position: absolute;
+  height: 35px;
+  left: 0;
+  top: 80px;
+  text-align: center;
+  opacity: 0;
+  transition: 0.7s;
+}
+.wrap .main .nav .menu li .sub_menu.on {
+  opacity: 1;
+}
+.wrap .main .nav .menu li .sub_menu li {
+  width: 100%;
+}
+.wrap .main .nav .menu li .sub_menu li a {
+  font-size: 14px;
+  line-height: 34px;
+  color: #000;
+}
+.wrap .main .nav .service {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.wrap .main .nav .service li a {
+  color: pink;
+}
+.wrap .main .nav .service li a.on {
+  color: #000;
+}
+.wrap .main .nav .service li:first-child a:first-child {
+  margin-right: 12px;
+}
+.wrap .main .nav .service li:first-child a {
+  font-size: 16px;
+}
+.wrap .main .nav .service li:nth-child(2) a {
+  font-size: 14px;
+}
+.wrap .main .nav .service li p img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+.wrap .main .nav_wrap .navBg {
+  position: absolute;
+  width: 100%;
+  height: 310px;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.699);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.wrap .main .nav_wrap .navBg.on {
+  visibility: visible;
+  opacity: 1;
+}
+/*<------여기부터 mainBg------>*/
+.mainBg {
+  width: 100%;
+  height: 100vh;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-slide > a {
+  position: relative;
+  width: 100%;
+}
+.swiper-wrapper .swiper-slide:first-child a {
+  color: #fff;
+}
+.swiper-slide a .slide_txt {
+  position: absolute;
+  left: -92%;
+  bottom: 80px;
+  text-align: left;
+}
+
+.swiper-slide a .slide_txt .bg_tit {
+  font-size: 40px;
+}
+.swiper-slide a .slide_txt .bg_intro {
+  font-size: 16px;
+  margin: 16px 0 30px;
+}
+.swiper-slide a .slide_txt button {
+  width: 170px;
+  height: 60px;
+  border-radius: 30px;
+  font-size: 14px;
+  color: #fff;
+  border: 1px solid #000;
+}
+.bg01 a,
+.bg04 a,
+.bg06 a,
+.bg07 a {
+  color: #000;
+}
+.bg02 a,
+.bg03 a,
+.bg05 a,
+.bg08 a {
+  color: #fff;
+}
+.bg01 a .slide_txt button,
+.bg04 a .slide_txt button,
+.bg06 a .slide_txt button,
+.bg07 a .slide_txt button {
+  color: #fff;
+  background: #000;
+  border: 1px solid #000;
+  border: 1px solid #000;
+}
+.bg02 a .slide_txt button,
+.bg03 a .slide_txt button,
+.bg05 a .slide_txt button,
+.bg08 a .slide_txt button {
+  color: #000;
+  background: #fff;
+  border: 1px solid #fff;
+}
+/*-----공통 사항------------------------*/
+.title {
+  height: 180px;
+  line-height: 180px;
+  text-align: center;
+}
+/*<------Best---------->*/
+.best {
+  width: 100%;
+}
+
+section {
+  width: 100%;
+  height: 660px;
+  display: flex;
+}
+
+.best .best_txt {
+  width: 42%;
+  position: relative;
+  background: #f9f9fb;
+}
+
+.best .best_txt .txt_wrap {
+  position: absolute;
+  width: 60%;
+  top: 200px;
+  left: 30%;
+  opacity: 0;
+}
+.best .best_txt .txt_wrap.on {
+  opacity: 1;
+}
+.best .best_txt .txt_wrap P,
+.best .best_txt .txt_wrap a {
+  position: relative;
+  top: 20px;
+  opacity: 0;
+  transition: 1s;
+}
+.best .best_txt .txt_wrap P.on,
+.best .best_txt .txt_wrap a.on {
+  top: 0px;
+  opacity: 1;
+}
+.best .best_txt .txt_wrap P:nth-child(2) {
+  transition-delay: 0.5s;
+}
+.best .best_txt .txt_wrap P:nth-child(3) {
+  transition-delay: 1s;
+}
+.best .best_txt .txt_wrap p:first-child,
+.best .best_txt .txt_wrap p:nth-child(2) {
+  font-size: 52px;
+}
+.best .best_txt .txt_wrap p:nth-child(3) {
+  padding: 25px 0 50px;
+}
+.best .best_txt .txt_wrap:first-child a {
+  position: relative;
+  display: block;
+  width: 140px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #000;
+  border-radius: 30px;
+  text-align: center;
+  padding-right: 20px;
+  font-size: 15px;
+  color: #000;
+}
+.best .best_txt .txt_wrap:first-child a::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url(../images/arrow1.png) center/cover no-repeat;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.2s;
+}
+.best .best_txt .txt_wrap:first-child a:hover:after {
+  right: 10px;
+}
+.best .best_txt .txt_wrap:nth-child(2) p:nth-child(2) {
+  font-size: 16px;
+  padding-top: 25px;
+}
+.best .best_con {
+  width: 58%;
+  height: 100%;
+}
+.best .swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.best .swiper .swiper-slide {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+.best .swiper .swiper-slide p {
+  width: 100%;
+  height: 100%;
+}
+.best .swiper .swiper-slide p img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.best .best_con .btn2 {
+  position: relative;
+}
+.best .best_con .btn2 .swiper-button-prev,
+.best .best_con .btn2 .swiper-button-next {
+  position: absolute;
+  width: 10px;
+  height: 14px;
+  top: -50px;
+  left: 0;
+  display: flex;
+  cursor: pointer;
+}
+.best_con .btn2 .swiper-button-prev {
+  background: url(../images/pre_gray-icon.png) center/cover no-repeat;
+
+  left: -200px;
+}
+.best .best_con .btn2 .swiper-button-next {
+  left: -100px;
+  background: url(../images/next_gray-icon.png) center/cover no-repeat;
+}
+.best .best_con .btn2 .swiper-button-next:after,
+.best .best_con .btn2 .swiper-button-prev:after {
+  display: none;
+}
+.best .best_con .btn2 .swiper-pagination {
+  position: absolute;
+  top: -100px;
+  left: -60%;
+  z-index: 1;
+}
+.best .best_con .btn2 .swiper-pagination .swiper-pagination-current {
+  font-size: 40px;
+}
+/*<------ New --------->*/
+.new {
+  width: 100%;
+  padding: 0 80px;
+  box-sizing: border-box;
+}
+.new_con {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+.new_con .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.new_con .swiper-slide {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.new_con .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.new_con .swiper-slide .detail .name,
+.set_con .swiper-slide .detail .name {
+  font-size: 13px;
+  text-align-last: left;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+.swiper-slide .detail .price {
+  display: flex;
+  gap: 10px;
+}
+
+.swiper-slide .detail .price span:first-child {
+  color: #999;
+  font-size: 12px;
+}
+.swiper-slide .detail .price span:nth-child(2) {
+  font-size: 13px;
+}
+.swiper-slide .detail .price ul {
+  display: flex;
+  font-size: 13px;
+  gap: 10px;
+}
+.swiper-slide .detail .price ul li:first-child {
+  color: #fb865b;
+}
+.new_con .btn3 {
+  position: absolute;
+  right: -10px;
+  top: -40px;
+}
+.new_con .btn3 .swiper-button-next,
+.new_con .btn3 .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+  cursor: pointer;
+  border: 1px solid #e5e5e5;
+}
+.new_con .btn3 .swiper-button-prev {
+  position: relative;
+  top: 10px;
+  left: -60px;
+}
+.new .new_con .swiper-button-next::after,
+.new .new_con .swiper-button-prev::after {
+  display: none;
+}
+.new .new_con .swiper-button-next p,
+.new .new_con .swiper-button-prev p {
+  width: 8px;
+  height: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.new .new_con .swiper-button-next p img,
+.new .new_con .swiper-button-prev p img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+/*<-------- 세트 상품 -------------->*/
+.set {
+  margin-top: 50px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.set section {
+  width: 100%;
+  height: 668px;
+  cursor: pointer;
+  overflow: hidden;
+  margin-bottom: 180px;
+}
+.set section a {
+  width: 100%;
+}
+.set section a > p {
+  width: 100%;
+  height: 100%;
+}
+.set section a > p img {
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+  transform: scale(1);
+  box-sizing: border-box;
+  object-fit: cover;
+}
+.set section:hover a > p img {
+  transform: scale(1.1);
+  box-sizing: border-box;
+}
+.set section a {
+  position: relative;
+  color: #fff;
+}
+.set section a .set_tit {
+  position: absolute;
+  bottom: 80px;
+  left: 80px;
+}
+.set section a .set_tit p:first-child {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+.con_wrap .set_con {
+}
+.set_con {
+  position: relative;
+  padding: 0 80px;
+  box-sizing: border-box;
+}
+
+.set_con .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.set_con .swiper-slide {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.set_con .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.set_con .btn {
+  position: absolute;
+  right: 70px;
+  top: -40px;
+}
+.set_con .btn .swiper-button-next,
+.set_con .btn .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+  cursor: pointer;
+  border: 1px solid #e5e5e5;
+}
+.set_con .btn .swiper-button-prev {
+  position: relative;
+  top: 10px;
+  left: -60px;
+}
+.set_con .swiper-button-next::after,
+.set_con .swiper-button-prev::after {
+  display: none;
+}
+.set_con .swiper-button-next p,
+.set_con .swiper-button-prev p {
+  width: 8px;
+  height: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.set_con .swiper-button-next p img,
+.set_con .swiper-button-prev p img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}

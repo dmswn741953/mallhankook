@@ -1,0 +1,277 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.wrap {
+  width: 100%;
+}
+.wrap .main {
+  width: 100%;
+  position: relative;
+}
+.wrap .notice {
+  position: relative;
+  width: 100%;
+  height: 34px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  line-height: 34px;
+  transition: 0.5s;
+}
+.wrap .notice.on {
+  height: 0;
+}
+.wrap .notice button {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  right: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  transition: 0.5s;
+}
+.wrap .notice button.on {
+  height: 0;
+  overflow: hidden;
+}
+.wrap .main .nav_wrap {
+  width: 100%;
+  position: relative;
+}
+
+.wrap .main .nav_wrap.on::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.5px;
+  background: rgba(163, 161, 161, 0.377);
+  top: 70px;
+  left: 0;
+  z-index: 2;
+}
+.wrap .main .nav {
+  width: 100%;
+  height: 69px;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 1fr;
+  z-index: 3;
+}
+
+.wrap .main .nav .nav_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 70px;
+  box-sizing: border-box;
+}
+.wrap .main .nav .nav_logo a {
+  display: inline-block;
+}
+.wrap .main .nav .nav_logo a p {
+  width: 185px;
+}
+.wrap .main .nav .nav_logo a p img {
+  width: 100%;
+}
+.wrap .main .nav .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.wrap .main .nav .menu li {
+  width: 110px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.wrap .main .nav .menu > li > a {
+  display: block;
+  color: #fff;
+  font-size: 16;
+  text-align: center;
+}
+.wrap .main .nav .menu > li > a.on {
+  color: #000;
+}
+.wrap .main .nav .menu > li > a span {
+  position: relative;
+}
+.wrap .main .nav .menu > li a span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #fb865b;
+  left: 0;
+  bottom: -24px;
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+.wrap .main .nav .menu > li:hover a span::after {
+  transform: scaleX(1);
+}
+.wrap .main .nav .menu li .sub_menu {
+  width: 100%;
+  position: absolute;
+  height: 35px;
+  left: 0;
+  top: 80px;
+  text-align: center;
+  opacity: 0;
+  transition: 0.7s;
+}
+.wrap .main .nav .menu li .sub_menu.on {
+  opacity: 1;
+}
+.wrap .main .nav .menu li .sub_menu li {
+  width: 100%;
+}
+.wrap .main .nav .menu li .sub_menu li a {
+  font-size: 14px;
+  line-height: 34px;
+  color: #000;
+}
+.wrap .main .nav .service {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.wrap .main .nav .service li a {
+  color: pink;
+}
+.wrap .main .nav .service li a.on {
+  color: #000;
+}
+.wrap .main .nav .service li:first-child a:first-child {
+  margin-right: 12px;
+}
+.wrap .main .nav .service li:first-child a {
+  font-size: 16px;
+}
+.wrap .main .nav .service li:nth-child(2) a {
+  font-size: 14px;
+}
+.wrap .main .nav .service li p img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+.wrap .main .nav_wrap .navBg {
+  position: absolute;
+  width: 100%;
+  height: 310px;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.699);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.wrap .main .nav_wrap .navBg.on {
+  visibility: visible;
+  opacity: 1;
+}
+/*<------여기부터 mainBg------>*/
+.mainBg {
+  width: 100%;
+  height: 100vh;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-slide > a {
+  position: relative;
+  width: 100%;
+}
+.swiper-wrapper .swiper-slide:first-child a {
+  color: #fff;
+}
+.swiper-slide a .slide_txt {
+  position: absolute;
+  left: -92%;
+  bottom: 80px;
+  text-align: left;
+}
+
+.swiper-slide a .slide_txt .bg_tit {
+  font-size: 40px;
+}
+.swiper-slide a .slide_txt .bg_intro {
+  font-size: 16px;
+  margin: 16px 0 30px;
+}
+.swiper-slide a .slide_txt button {
+  width: 170px;
+  height: 60px;
+  border-radius: 30px;
+  font-size: 14px;
+  color: #fff;
+  border: 1px solid #000;
+}
+.bg01 a,
+.bg04 a,
+.bg06 a,
+.bg07 a {
+  color: #000;
+}
+.bg02 a,
+.bg03 a,
+.bg05 a,
+.bg08 a {
+  color: #fff;
+}
+.bg01 a .slide_txt button,
+.bg04 a .slide_txt button,
+.bg06 a .slide_txt button,
+.bg07 a .slide_txt button {
+  color: #fff;
+  background: #000;
+  border: 1px solid #000;
+  border: 1px solid #000;
+}
+.bg02 a .slide_txt button,
+.bg03 a .slide_txt button,
+.bg05 a .slide_txt button,
+.bg08 a .slide_txt button {
+  color: #000;
+  background: #fff;
+  border: 1px solid #fff;
+}

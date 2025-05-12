@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mallhankoo</title>
+    <link rel="stylesheet" href="./css/mallhankook.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="main">
+        <div class="notice">
+          <p>
+            카톡 채널 추가 3,000원ㅣ신규가입 5% 할인ㅣ70,000원 이상 무료배송
+          </p>
+          <button><img src="./images/closed.png" alt="closed" /></button>
+        </div>
+        <div class="nav">
+          <div class="nav_logo">
+            <a href="#">
+              <p><img src="./images/logo_black.png" alt="logo_black" /></p>
+            </a>
+          </div>
+          <ul class="menu">
+            <li><a href="">브랜드</a></li>
+            <li><a href="">컬렉션</a></li>
+            <li><a href="">스토어</a></li>
+            <li><a href="">아카이브</a></li>
+            <li><a href="">B2B/주문제작</a></li>
+            <li><a href="">커뮤니티</a></li>
+            <li><a href="">매장 안내</a></li>
+          </ul>
+
+          <ul>
+            <li><a href="">Login</a> <a href="">Join</a></li>
+            <li>KR</li>
+            <li>
+              <p><img src="./images/nav_icon_01.svg" alt="search" /></p>
+            </li>
+            <li>
+              <p><img src="./images/nav_icon_02.svg" alt="favorite" /></p>
+            </li>
+            <li>
+              <p><img src="./images/nav_icon_03.svg" alt="shop" /></p>
+            </li>
+          </ul>
+        </div>
+        <div class="mainBg">
+          <div class="swiper Main_Swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./images/bg_01.jpg" alt="bg01" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/bg_02.jpg" alt="bg02" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/bg_03.jpg" alt="bg03" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/bg_04.jpg" alt="bg04" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/bg_05.jpg" alt="bg05" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/bg_06.jpg" alt="bg06" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/bg_07.jpg" alt="bg07" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/bg_08.jpg" alt="bg08" />
+              </div>
+            </div>
+            <div class="btn">
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/mallhankook.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(".notice button").click(function () {
+        $(".notice").addClass("on");
+        $(this).addClass("on");
+      });
+    </script>
+  </body>
+</html>

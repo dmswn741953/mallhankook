@@ -17,7 +17,7 @@ a {
   width: 100%;
   position: relative;
 }
-.wrap .main .notice {
+.wrap .notice {
   position: relative;
   width: 100%;
   height: 34px;
@@ -28,10 +28,10 @@ a {
   line-height: 34px;
   transition: 0.5s;
 }
-.wrap .main .notice.on {
+.wrap .notice.on {
   height: 0;
 }
-.wrap .main .notice button {
+.wrap .notice button {
   content: "";
   position: absolute;
   width: 21px;
@@ -43,7 +43,7 @@ a {
   border: none;
   transition: 0.5s;
 }
-.wrap .main .notice button.on {
+.wrap .notice button.on {
   height: 0;
   overflow: hidden;
 }
@@ -60,6 +60,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-right: 70px;
 }
 .wrap .main .nav .nav_logo a {
   display: inline-block;
